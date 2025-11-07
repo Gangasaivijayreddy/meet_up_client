@@ -12,7 +12,7 @@ export default function Details(){
          useEffect(() => {
             const fetchData = async () => {
               try {
-                const res = await fetch(`http://localhost:3000/events/${name}`);
+                const res = await fetch(`https://meet-up-backend-three.vercel.app/events/${name}`);
                 const event = await res.json();
                 if(event){
                     setData(event.data)

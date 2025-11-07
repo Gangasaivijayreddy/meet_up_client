@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("http://localhost:3000/events/");
+        const res = await fetch("https://meet-up-backend-three.vercel.app/events/");
         const events = await res.json();
         setEventsData(events.data);
         setFilteredData(events.data);
