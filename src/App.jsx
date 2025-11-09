@@ -38,7 +38,7 @@ function App() {
     if (searchTerm.trim() !== "") {
       filtered = filtered.filter(e =>
         e.eventName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        (e.tags && e.tags.some(tag =>
+        (e.eventTags && e.eventTags.some(tag =>
           tag.toLowerCase().includes(searchTerm.toLowerCase())
         ))
       );
@@ -46,13 +46,15 @@ function App() {
 
     setFilteredData(filtered);
   }, [eventType, searchTerm, eventsdata]);
+ 
+  // html..........
 
   return (
     <>
-      <div className='bg-light container-fluid px-4'>
+      <div className='bg-light container-fluid px-2 m-2' >
         {/* Header */}
         <div className='d-flex flex-wrap justify-content-between align-items-center gap-2'>
-          <h2 className="text-danger">Meetup</h2>
+         <Link to="/" style={{ textDecoration: "none", color: "inherit" }}> <h2 className="text-danger shadow-lg">Meetup</h2></Link>
           <input
             className="rounded p-2"
             type="search"
@@ -87,7 +89,7 @@ function App() {
             filteredData.map(d => (
               <div className='col mb-4' key={d._id}>
                 <Link to={`/Details/${d.eventName}`} style={{ textDecoration: "none", color: "inherit" }}>
-                  <div className='card h-100'>
+                  <div className='card h-100 shodow-lg'>
                     <div className='position-relative'>
                       <img
                         src={d.imageUrl}

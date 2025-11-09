@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import React, { useEffect,useState } from "react";
-import { Button } from "bootstrap/dist/js/bootstrap.bundle.min";
+//import { Button } from "bootstrap/dist/js/bootstrap.bundle.min";
+import { Link } from 'react-router-dom';
 
 
 export default function Details(){
@@ -31,10 +32,10 @@ export default function Details(){
 
     return(
         <>
-        <div className='bg-light container-fluid px-4 py-3'>
+        <div className='bg-light container-fluid px-2 m-2 '>
         {/* Header */}
         <div className='d-flex justify-content-between align-items-center'>
-          <h2 className="text-danger">Meetup</h2>
+          <Link to="/"  style={{ textDecoration: "none", color: "inherit" }}> <h2 className="text-danger shadow-lg ">Meetup</h2></Link>
           <input
             className="rounded p-2"
             type="search"
@@ -61,7 +62,7 @@ export default function Details(){
                 <h4>Event Tags:</h4>
                 {
                     data?.eventTags?.length>0?(data.eventTags.map((tag)=>
-                            (<button className="mx-3 rounded my-3 bg-danger text-light">{tag}</button>)
+                            (<button className="mx-3 rounded my-3 bg-danger text-light shodow-lg">{tag}</button>)
                     )
                 ):(<p>No tags available</p>)
                 };
