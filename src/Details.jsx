@@ -32,12 +32,12 @@ export default function Details(){
 
     return(
         <>
-        <div className='bg-light container-fluid px-2 m-2 '>
+        <div className='bg-light container-fluid px-3 py-3 '>
         {/* Header */}
-        <div className='d-flex justify-content-between align-items-center'>
+        <div className='d-flex flex-wrap gap-2 justify-content-between align-items-center'>
           <Link to="/"  style={{ textDecoration: "none", color: "inherit" }}> <h2 className="text-danger shadow-lg ">Meetup</h2></Link>
           <input
-            className="rounded p-2"
+            className="rounded p-2 w-100 w-md-auto"
             type="search"
             placeholder="Search by title and tags"
           />
@@ -51,7 +51,7 @@ export default function Details(){
                 <h3>Marketing Seminar</h3>
                 <p className="p-0 m-0">Hosted By:</p>
                 <p className="pb-4"><strong>{data.hostedBy}</strong></p>
-                <img src={data.imageUrl} alt="" className="image-fluid w-100 rounded " />
+                <img src={data.imageUrl} alt="" className="image-fluid w-100 rounded " style={{ objectFit: "cover", maxHeight: "350px" }} />
                 <h4 className="pt-3">Details:</h4>
                 <p>{data.details}</p>
                 <h4>Additional Information:</h4>
@@ -72,7 +72,7 @@ export default function Details(){
             {/* right side of view */}
             <div className="col">
                 <div className="card mx-4 my-4 py-4">
-                    <div className="d-flex justify-content-start px-4 py-0 my-0">
+                    <div className="d-flex flex-wrap justify-content-start px-4 py-0 my-0">
                         <p className="card-text ">
                         Date: {new Date(data.startDate).toLocaleDateString("en-GB", {
                           weekday: "short",

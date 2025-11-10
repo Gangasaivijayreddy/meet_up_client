@@ -51,7 +51,7 @@ function App() {
 
   return (
     <>
-      <div className='bg-light container-fluid px-2 m-2' >
+      <div className='bg-light container-fluid px-3 py-3' >
         {/* Header */}
         <div className='d-flex flex-wrap justify-content-between align-items-center gap-2'>
          <Link to="/" style={{ textDecoration: "none", color: "inherit" }}> <h2 className="text-danger shadow-lg">Meetup</h2></Link>
@@ -94,7 +94,7 @@ function App() {
                       <img
                         src={d.imageUrl}
                         alt={d.eventName}
-                        style={{ height: "200px", objectFit: "cover" }}
+                        style={{ height: "200px",maxHeight: "250px", objectFit: "cover" }}
                         className="img-fluid card-img-top w-100"
                       />
                       <button className='position-absolute top-0 end-0 p-1 m-4 rounded bg-secondary-subtle'>
@@ -102,7 +102,7 @@ function App() {
                       </button>
                     </div>
                     <div className="card-body d-flex flex-column">
-                      <div className='d-flex justify-content-start'>
+                      <div className='d-flex flex-wrap justify-content-start'>
                         <p className="card-text pe-3">
                           Date: {new Date(d.startDate).toLocaleDateString("en-GB", {
                             weekday: "short",
