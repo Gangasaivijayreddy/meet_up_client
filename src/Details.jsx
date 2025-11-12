@@ -36,11 +36,7 @@ export default function Details(){
         {/* Header */}
         <div className='d-flex flex-wrap gap-2 justify-content-between align-items-center'>
           <Link to="/"  style={{ textDecoration: "none", color: "inherit" }}> <h2 className="text-danger shadow-lg ">Meetup</h2></Link>
-          <input
-            className="rounded p-2 w-100 w-md-auto"
-            type="search"
-            placeholder="Search by title and tags"
-          />
+          
 
           </div>
         <hr />
@@ -74,7 +70,7 @@ export default function Details(){
                 <div className="card mx-4 my-4 py-4">
                     <div className="d-flex flex-wrap justify-content-start px-4 py-0 my-0">
                         <p className="card-text ">
-                        Date: {new Date(data.startDate).toLocaleDateString("en-GB", {
+                        Start Date: {new Date(data.startDate).toLocaleDateString("en-GB", {
                           weekday: "short",
                           year: "numeric",
                           month: "short",
@@ -82,7 +78,7 @@ export default function Details(){
                         })}
                       </p>
                       <p className="card-text ">
-                        Time: {new Date(data.startDate).toLocaleTimeString("en-GB", {
+                        Start Time: {new Date(data.startDate).toLocaleTimeString("en-GB", {
                           hour: "2-digit",
                           minute: "2-digit",
                         })}
@@ -91,7 +87,7 @@ export default function Details(){
 
                     <div className="d-flex justify-content-start px-4 py-0 my-0">
                         <p className="card-text">
-                        Date: {new Date(data.endDate).toLocaleDateString("en-GB", {
+                        End Date: {new Date(data.endDate).toLocaleDateString("en-GB", {
                           weekday: "short",
                           year: "numeric",
                           month: "short",
@@ -99,7 +95,7 @@ export default function Details(){
                         })}
                       </p>
                       <p className="card-text ">
-                        Time: {new Date(data.endDate).toLocaleTimeString("en-GB", {
+                        End Time: {new Date(data.endDate).toLocaleTimeString("en-GB", {
                           hour: "2-digit",
                           minute: "2-digit",
                         })}
@@ -114,7 +110,7 @@ export default function Details(){
                     </div>
 
                     <div className="px-4" >
-                        <p  ><strong>$ {data.price}</strong></p>
+                        <p  ><strong>Cost ₹ {data.price}</strong></p>
                     </div>
 
                 </div>
