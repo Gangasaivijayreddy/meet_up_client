@@ -60,7 +60,7 @@ export default function Details(){
                     data?.eventTags?.length>0?(data.eventTags.map((tag)=>
                             (<button className="mx-3 rounded my-3 bg-danger text-light shodow-lg">{tag}</button>)
                     )
-                ):(<p>No tags available</p>)
+                ):(<p>No tags available please wait</p>)
                 };
                 
                 

@@ -84,7 +84,7 @@ function App() {
         {/* Events cards */}
         <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 mt-3'>
           {filteredData.length === 0 ? (
-            <p className='text-center mt-4'>No events found.</p>
+            <p className='text-center mt-4'>No events found Please wait.</p>
           ) : (
             filteredData.map(d => (
               <div className='col mb-4' key={d._id}>
